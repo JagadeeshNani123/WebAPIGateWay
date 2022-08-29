@@ -1,0 +1,84 @@
+﻿{
+  "Routes": [
+
+    {
+      //"https": null, //localhost:44392/WeatherForecast
+      "DownstreamPathTemplate": "/WeatherForecast",
+      "DownstreamScheme": "https",
+      "DownstreamHttpMethod": "Get",
+      "RouteIsCaseSensitive": false,
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "44392"
+        }
+      ],
+      "UpstreamPathTemplate": "/users/getusers",
+      "UpstreamHttpMethod": [ "Get" ]
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "GatewayAuthenticationKey",
+      //  "AllowedScopes": []
+      // }
+
+    },
+    {
+      //https://locathost:7163/api/values
+
+      "DownstreamPathTemplate": "/api/employeemanager",
+      "DownstreamSchema": "https",
+      "DownstreamHttpMethod": "GET",
+      "RouteIsCaseSensitive": false,
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "7211"
+        }
+      ],
+      "UpstreamPathTemplate": "/employee/data",
+      "UpstreamHttpMethod": [ "Get" ]
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "GatewayAuthenticationKey",
+      //  "AllowedScopes": []
+      //}
+    },
+    {
+      "DownstreamPathTemplate": "/api/OfficeLocation",
+      "DownstreamSchema": "https",
+      "DownstreamHttpMethod": "GET",
+      "RouteIsCaseSensitive": false,
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "7018"
+        }
+      ],
+      "UpstreamPathTemplate": "/office/findlocation",
+      "UpstreamHttpMethod": [ "Get" ]
+
+    },
+    {
+      "DownstreamPathTemplate": "/api/StudentDepartment",
+      "DownstreamSchema": "https",
+      "DownstreamHttpMethod": "GET",
+      "RouteIsCaseSensitive": false,
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "7211"
+        }
+      ],
+      "UpstreamPathTemplate": "/office/location/",
+      "UpstreamHttpMethod": [ "Get" ]
+      //"QoSOptions": {
+      //  "ExceptionsAllowedBeforeBreaking": 2,
+      //  "DurationOfBreak": 10000,
+      //  "TimeoutValue": 2000
+      //}
+    }
+
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:44366/"
+  }
+
+}
